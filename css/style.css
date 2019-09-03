@@ -3,26 +3,12 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
 }
+.centre{
+    text-align: center;
+    margin-bottom: 10em;
+}
 h1{
-    justify-content: center;
-    margin-left: 8em;
-    color: black;
-}
-.selectedShoe{
-    justify-content: center;
-    margin-left: 5em;
-    border-radius: 0.2em;
-    border: solid black;
-    height: 20em;
-    width: 20em;
-}
-.stockEntered{
-    justify-content: center;
-    border-radius: 0.2em;
-    border: solid black;
-    height: 20em;  
-    width: 20em;
-    margin-bottom: 15em;
+  text-align: center;
 }
 h3{
     margin-left: 3em;
@@ -30,11 +16,30 @@ h3{
 h4{
     margin-left: 15em;
 }
-.catalogue{
-  
-    padding: 0.5px;
-    width: 45em;
+.centre-cart{
+    text-align: center;
+    margin-left: 5em;
+    
 }
-h5{
-color: black;
+
+.shoeTotal{
+    color: black;
+}
+.mycart{
+    display: flex;
+    padding: 1em;
+    color: black;
+}
+table {
+    margin: 10px;
+}
+th, td {
+    padding: 5px;
+    border: 1px solid #999;
+}
+th {
+    background: #ccc;
+}
+tr:nth-child(odd) {
+    background: #eee;
 }

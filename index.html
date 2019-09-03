@@ -11,128 +11,126 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
     <script type="text/x-template" class="shoeCart">
+        <table>
+            {{#each cart}}
+            <tr>
+                <td>Shoe : </td>
+                <td>{{shoe}}</td>
+            </tr>
+            <tr>
+                 <td>Color :</td>
+                <td>{{color}}</td>
+            </tr>
+            <tr>
+                <td>Size :</td>
+                <td>{{size}}</td>
+            </tr>
+            <tr>
+                <td>Price :</td>
+                <td>{{price}}</td>
+            </tr>
+            <tr>
+                <td>Avilable:</td>
+                <td>{{in_stock}}</td>
+            </tr>
+            {{/each}}
+        </table>
+        <strong>Total : {{total}}</strong>
+        </script>
 
 
-        {{#each cart}}
-         <ul>
-        <li>{{shoe}}</li>
-        <li>{{color}}</li>
-        <li>Size: {{size}}</li>
-        <li>Available: {{in_stock}}</li>
-        <li>Price: R {{price}}</li>
-       </ul>
-    {{/each}}
-
-  </script>
 </head>
 
 <body>
-    <div class="container">
-        <h1>Shoe catalogue</h1>
+    <h1>Shoe catalogue</h1>
+    <div class="centre">
+        <select class="shoes">
+            <option class="shoes" value=>Shoes</option>
+            <option class="shoes" value="summer-sandles">Summer Sandles</option>
+            <option class="shoes" value="ladys-boots">Ladys Boots</option>
+            <option class="shoes" value="woderland-vans">Wonderland Vans</option>
+            <option class="shoes" value="cinderella-nikes">Cinderella Nikes</option>
+            <option class="shoes" value="crocs-sneakers">Crocs Sneakers</option>
+            <option class="shoes" value="black-wedge">Black Wedge</option>
+            <option class="shoes" value="crossover-heal">Cross over Heels</option>
+        </select>
 
-        <div class="row">
-            <div class="col-3">
-                <input class="shoeSearch" value="">
-                <button id="searchButton" type="click">Search</button>
-            </div>
-            <div class="col-3">
-                    <h5>Shoe</h5>
-                <form class="dropdown-menu">
-                    <select class="shoes">
-                        <option class="shoes" value=>Shoes</option>
-                        <option class="shoes" value="summer-sandles">Summer Sandles</option>
-                        <option class="shoes" value="ladys-boots">Ladys Boots</option>
-                        <option class="shoes" value="woderland-vans">Wonderland Vans</option>
-                        <option class="shoes" value="cinderella-nikes">Cinderella Nikes</option>
-                        <option class="shoes" value="crocs-sneakers">Crocs Sneakers</option>
-                        <option class="shoes" value="black-wedge">Black Wedge</option>
-                        <option class="shoes" value="crossover-heal">Cross over Heels</option>
-                    </select>
-                </form>
-            </div>
-            <div class="col-3">
-                <form class="">
-                        <h5>Color</h5>
-                    <select class="colours ">
-                        <option class="" value="">Colour</option>
-                        <option class="" value="">All Colours</option>
-                        <option class="" value="black">Black</option>
-                        <option class="" value="blue">Blue</option>
-                        <option class="" value="brown">Brown</option>
-                        <option class="" value="white">White</option>
-                        <option class="" value="red">Red</option>
-                    </select>
-                </form>
-            </div>
-            <div class="col-3">
-                <form class="">
-                    <h5>Size</h5>
-                    <select class="sizes">
-                        <option class="sizes" value="">Size</option>
-                        <option class="sizes" value="">All Sizes</option>
-                        <option class="sizes" value="4">4</option>
-                        <option class="sizes" value="5">5</option>
-                        <option class="sizes" value="6">6</option>
-                        <option class="sizes" value="7">7</option>
-                        <option class="sizes" value="8">8</option>
-                        <option class="sizes" value="9">9</option>
-                        <option class="sizes" value="10">10</option>
-                        <option class="sizes" value="11">11</option>
-                        <option class="sizes" value="12">12</option>
-                    </select>
-                </form>
-            </div>
+        <select class="sizes">
+            <option class="sizes" value="">Size</option>
+            <option class="sizes" value="">All Sizes</option>
+            <option class="sizes" value="4">4</option>
+            <option class="sizes" value="5">5</option>
+            <option class="sizes" value="6">6</option>
+            <option class="sizes" value="7">7</option>
+            <option class="sizes" value="8">8</option>
+            <option class="sizes" value="9">9</option>
+            <option class="sizes" value="10">10</option>
+            <option class="sizes" value="11">11</option>
+            <option class="sizes" value="12">12</option>
+        </select>
+
+        <select class="prices">
+            <option class="price" value="">Price</option>
+            <option class="price" value="R275">R275</option>
+            <option class="price" value="R350">R350</option>
+            <option class="price" value="R450">R450</option>
+            <option class="price" value="R275">R275</option>
+            <option class="price" value="R275">R275</option>
+        </select>
+
+        <select class="colours">
+            <option class="colours" value="">Colour</option>
+            <option class="colours" value="black">Black</option>
+            <option class="colours" value="blue">Blue</option>
+            <option class="colours" value="brown">Brown</option>
+            <option class="colours" value="white">White</option>
+            <option class="colours" value="red">Red</option>
+        </select>
+        <button type="button" class="filterBtn">Select</button>
+    </div>
+
+    <div class="message centre-cart">
+        <p>We have 12 red nike shoes in stock at a price of R12.00</p>
+          
+    </div>
+
+    <div class="centre-cart">
+        <div class="mycart">
+
+          
         </div>
 
-        <div class="row">
-            <div class="col-12">
-                <button type="button" class="filterBtn">Apply</button>
-            </div>
-            <div class="row">
-                <div class="col-12">
-                    <div class="error"></div>
-                </div>
-            </div>
-
-        </div>
-        <div class="row">
-            <div class="col-12">
-                <div class="displayCart">
-
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-3">
-                <span>
-                    <h5>Shoe</h5>
-                    <input class="addStock" value="">
-                </span>
-                </div>
-                <div class="col-3">
-                <span>
-                    <h5>Size</h5>
-                    <input class="addStock" value="">
-                </span>
-                </div>
-                <div class="col-3">
-                <span>
-                    <h5>Color</h5>
-                    <input class="addStock" value="">
-                    <button class="addButton" type="click">Add Stock</button>
-                </span>
-            <div class="col-3">
-                <div class="addStock"></div>
-            </div>
-            </div>
+        <div class="shoeTotal"> 0</div>
+        <button class="removeShoes">Clear My Cart</button>
+    </div>
 
 
-        
+    <div class="Stock">
+
+        Shoe :<input class="addShoe" value="">
+
+        Size:<input class="addSize" value="">
+
+        Price: <input class="addPrice" value="">
+
+        Color: <input class="addColor" value="">
+
+        In Stock: <input class="addstock" value="">
+
+        <button class="addStockButton">Add Stock</button>
+
+        <div class="addStock"></div>
+    </div>
 
 
-        <script src="./js/shoeFactory.js" charset="utf-8"></script>
-        <script src="./js/dom.js" charset="utf-8"></script>
+    </div>
+
+
+
+
+    <script src="./js/stock.js" charset="utf-8"></script>
+    <script src="./js/shoeFactory.js" charset="utf-8"></script>
+    <script src="./js/dom.js" charset="utf-8"></script>
 </body>
 
 </html>
