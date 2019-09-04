@@ -40,7 +40,7 @@ function ShoeFinder(data) {
     }
 
     function cartShoes(shoe, size, color, price, in_stock) {
-        alert(in_stock)
+//         alert(in_stock)
         var inCart = { shoe, size, color, price, in_stock }
         myCart.push(inCart);
     }
